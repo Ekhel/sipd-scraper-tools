@@ -1,0 +1,26 @@
+{
+  "name": "sipd-scraper-tools",
+  "version": "1.0.0",
+  "description": "Tools untuk Scraping Data dari SIPD (Monev dan SIMDA)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ekhel/sipd-scraper-tools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ekhel/sipd-scraper-tools/issues"
+  },
+  "homepage": "https://github.com/Ekhel/sipd-scraper-tools#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^10.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
