@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    {{>header}}
+    <br />
+    <br />
+    <div class="ui segment">
+        <div class="ui container">
+            <form class="ui form">
+                <div class="field">
+                    <label>Tahun Anggaran</label>
+                    <input type="text" name="tahun_anggaran" placeholder="Tahun Anggaran">
+                </div>
+                <div class="field">
+                    <label>ID Daerah</label>
+                    <input type="text" name="id_daerah" placeholder="ID Daerah">
+                </div>
+                <div class="field">
+                    <label>User</label>
+                    <input type="text" name="user_name" placeholder="Username">
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input type="text" name="user_pass" placeholder="Password">
+                </div>
+
+                <button class="ui button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    {{>footer}}
+
+</body>

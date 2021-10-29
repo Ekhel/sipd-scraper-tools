@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 
 const renjaRoutes = require('./routes/renjaRoute');
+const configRoutes = require('./routes/configRoute');
 
 const viewPath = path.join(__dirname, './templates/views');
 const partialsPath = path.join(__dirname, './templates/partials');
@@ -20,5 +21,6 @@ app.get('', (req, res) => {
 });
 
 app.use('/data/listing', renjaRoutes);
+app.use('/data/config', configRoutes);
 
 module.exports = app;
