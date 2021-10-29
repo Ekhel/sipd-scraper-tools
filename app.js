@@ -3,6 +3,8 @@ const hbs = require('hbs');
 const path = require('path');
 const app = express();
 
+const renjaRoutes = require('./routes/renjaRoute');
+
 const viewPath = path.join(__dirname, './templates/views');
 const partialsPath = path.join(__dirname, './templates/partials');
 
@@ -16,5 +18,7 @@ app.get('', (req, res) => {
         name: 'Ekhel'
     });
 });
+
+app.use('/data/listing', renjaRoutes);
 
 module.exports = app;
