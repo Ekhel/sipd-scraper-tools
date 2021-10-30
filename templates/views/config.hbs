@@ -12,7 +12,7 @@
     <br />
     <div class="ui segment">
         <div class="ui container">
-            <form class="ui form">
+            <form class="ui form" action="/saveconfig" method="post">
                 <div class="field">
                     <label>Tahun Anggaran</label>
                     <input type="text" name="tahun_anggaran" placeholder="Tahun Anggaran">
@@ -22,12 +22,16 @@
                     <input type="text" name="id_daerah" placeholder="ID Daerah">
                 </div>
                 <div class="field">
+                    <label>Link SIPD</label>
+                    <input type="text" name="sipd_url" placeholder="ID Daerah">
+                </div>
+                <div class="field">
                     <label>User</label>
                     <input type="text" name="user_name" placeholder="Username">
                 </div>
                 <div class="field">
                     <label>Password</label>
-                    <input type="text" name="user_pass" placeholder="Password">
+                    <input type="password" name="user_pass" placeholder="Password">
                 </div>
 
                 <button class="ui button" type="submit">Submit</button>
