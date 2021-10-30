@@ -8,12 +8,15 @@ const app = express();
 const renjaRoutes = require('./routes/renjaRoute');
 const configRoutes = require('./routes/configRoute');
 
+const public = path.join(__dirname, './public/');
 const viewPath = path.join(__dirname, './templates/views');
 const partialsPath = path.join(__dirname, './templates/partials');
 
 app.set('view engine', 'hbs');
 app.set('views', viewPath);
 hbs.registerPartials(partialsPath);
+
+app.use(express.static(public));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
