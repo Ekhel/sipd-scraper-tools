@@ -29,9 +29,21 @@ app.get('', (req, res) => {
 });
 
 app.get('/config', (req, res) => {
-    res.render('config', {
-        title: 'Config Auth'
-    });
+    fs.readFile('./utils/dataConfig.json','utf-8', (err, configString) => {
+        if (err) {
+            res.render('config', {
+                message: 'DATA BELUM TERSEDIA'
+            })
+        } else {
+            const data = JSON.parse(configString);
+            res.render('config', {
+                title: 'Data Config',
+                result: data
+            })
+        }
+
+        
+    })
 });
 
 app.post('/saveconfig', (req, res) => {
@@ -53,8 +65,10 @@ app.post('/saveconfig', (req, res) => {
     
     const dataSetJson = JSON.stringify(set);
     fs.writeFile('./utils/dataConfig.json',dataSetJson,finished);
-
-    return res.json(req.body);
+    
+    return res.render('home', {
+        message: 'Config Berhasil'
+    });
 })
 
 app.use('/data/listing', renjaRoutes);
