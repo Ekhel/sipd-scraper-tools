@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/jayapura-dev/data-distrik/blob/master/assets/images/tools.png" width="600px"></p>
+<p align="center"><img src="https://github.com/Ekhel/sipd-scraper-tools/blob/main/public/img/tools-logo.png" width="600px"></p>
 
 # sipd-scraper-tools
 Tools untuk Scraping Data dari SIPD (Monev dan SIMDA)
