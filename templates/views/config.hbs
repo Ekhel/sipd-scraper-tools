@@ -10,10 +10,13 @@
     {{>header}}
     <br />
     <br />
-    <div class="ui segment">
-        <div class="ui container">
+    <br />
+    <div class="ui container">
+
+        <div class="ui segment">
             {{message}}
-            <br>
+            <h4 class="ui dividing header"><i class="icon cogs"></i> SETTING AUTH SIPD </h4>
+            <br />
             <form class="ui form" action="/saveconfig" method="post">
                 <div class="field">
                     <label>Tahun Anggaran</label>
@@ -37,7 +40,7 @@
                     <input type="password" name="user_pass" value="{{result.user_pass}}" placeholder="Password">
                 </div>
 
-                <button class="ui button" type="submit">Submit</button>
+                <button class="ui button" type="submit">Simpan</button>
             </form>
         </div>
     </div>
