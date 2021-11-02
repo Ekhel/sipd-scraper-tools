@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    {{>header}}
+    <br />
+    <br />
+    <br />
+    <div class="ui container">
+
+        <div class="ui segment">
+            {{message}}
+            <h4 class="ui dividing header"><i class="icon cogs"></i> SETTING AUTH SIPD </h4>
+            <br />
+            <form class="ui form" action="/saveconfig" method="post">
+                <div class="field">
+                    <label>Tahun Anggaran</label>
+                    <input type="text" name="tahun_anggaran" value="{{result.tahun_anggaran}}"
+                        placeholder="Tahun Anggaran">
+                </div>
+                <div class="field">
+                    <label>ID Daerah</label>
+                    <input type="text" name="id_daerah" value="{{result.id_daerah}}" placeholder="ID Daerah">
+                </div>
+                <div class="field">
+                    <label>Link SIPD</label>
+                    <input type="text" name="sipd_url" value="{{result.sipd_url}}" placeholder="ID Daerah">
+                </div>
+                <div class="field">
+                    <label>User</label>
+                    <input type="text" name="user_name" value="{{result.user_name}}" placeholder="Username">
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input type="password" name="user_pass" value="{{result.user_pass}}" placeholder="Password">
+                </div>
+
+                <button class="ui button" type="submit">Simpan</button>
+            </form>
+        </div>
+    </div>
+
+    {{>footer}}
+
+</body>

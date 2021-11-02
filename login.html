@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sistem Informasi Pembangunan Daerah">
+    <meta name="author" content="Krucel">
+    <script type="text/javascript" src="/ruxitagentjs_ICA27Vfjqrux_10227211007093412.js" data-dtconfig="rid=RID_119357720|rpid=-1879281985|domain=kemendagri.go.id|reportUrl=/rb_bf06122hrx|app=ea7c4b59f27d43eb|rcdec=1209600000|featureHash=ICA27Vfjqrux|vcv=2|rdnt=1|uxrgce=1|bp=3|srmcrv=10|cuc=60z2qnzt|mel=100000|dpvc=1|ssv=4|lastModification=1635380545412|dtVersion=10227211007093412|srmcrl=1|tp=500,50,0,1|uxdcw=1500|agentUri=/ruxitagentjs_ICA27Vfjqrux_10227211007093412.js"></script><link rel="icon" type="image/png" sizes="16x16" href="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/images/indonesia-flag.png">
+    <title>Sistem Informasi Pemerintahan Daerah</title>
+    <link href="https://jayapurakab.sipd.kemendagri.go.id/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://jayapurakab.sipd.kemendagri.go.id/assets/css/animate.css" rel="stylesheet">
+    <link href="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/custom-select/custom-select.css" rel="stylesheet" type="text/css">
+    <link href="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="https://jayapurakab.sipd.kemendagri.go.id/assets/css/style.css" rel="stylesheet">
+    <link href="https://jayapurakab.sipd.kemendagri.go.id/assets/css/colors/red-dark.css" id="theme" rel="stylesheet">
+    <link href="https://jayapurakab.sipd.kemendagri.go.id/assets/css/extra_colors.css" id="theme" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      .title{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        /*-webkit-transition: .1s all linear;*/
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 30%, #000 50%, rgba(0,0,0,.7) 70%);
+        -webkit-mask-size: 200%;
+        animation: shine 2s linear infinite;
+      }
+      @keyframes  shine {
+        from { -webkit-mask-position: 150%; }
+        to { -webkit-mask-position: -50%; }
+      }
+      .wrapper-tengah{ padding-left:20px; padding-right:20px; margin-right: auto; margin-left: auto; width: 600px; }
+      @media (max-width:480px){.wrapper-tengah{ width: 90%; }.media-left{padding-top:8%}}
+      @media (min-width:968px){.bulet-1{margin-left: 11%; }}
+
+      .text-outline {
+        color: #FFFFFF;
+        text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+      }
+      .running_man{
+        font-size: 15px;
+        color:#000;
+        z-index: 101;
+        background-color: yellow;
+        line-height: 30px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: none;
+    }
+    </style>
+</head>
+<body class="content-wrapper">
+  <!-- Preloader -->
+  <div class="preloader" style="display: none;">
+    <div class="cssload-speeding-wheel"></div>
+  </div>
+  <div class="running_man">Sehubungan dengan pengembangan infrastruktur SIPD sehingga SIPD tidak dapat di akses pada tanggal 4 s.d. 5 September 2021. Mohon maaf atas ketidaknyamanannya</div>
+  <div id="wrapper">
+        <div class="login-register"></div>
+          <nav>
+          <div>
+              <!-- Search input and Toggle icon -->
+              <ul class="nav navbar-top-links navbar-left"></ul>
+                            <ul class="nav navbar-top-links navbar-right pull-right" style="z-index:1;">
+                                <li class="">
+                      <a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="javascript:void"><i class="ico-menu3" style="margin-top:-5px;"></i> <span class="text-shadow">Menu</span></a>
+                        <ul class="dropdown-menu animated bounceInDown dropdown-menu-right">
+                            <li>
+                              <a href="javascript:void(0);" onclick="window.location.replace('/daerah')"> Halaman Utama </a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" onclick="window.location.replace('?EqgACT2T3gh9WODwzqXkXjY7avdmc1rMpJDH22EIncwWLuAaYTzYa0gtqvw6B@LYZYgrsTnZUAzfmqW2IVGbKZamNIFpN8ReOutORZRKQEM6x@WMk6t2vS@Yps/DNBQ5')"> Sistem Informasi Pembangunan Daerah </a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" onclick="window.location.replace('?S2gIXFiVLpTHS56fibS7ObQwVVxNv@DF4mjGJbzYozofDPPWNlqls5N8ERv2brl7TWqOUsIA2PARnmZC3OBBcrpOjifpUW3Vc8einKWzPQsFboxZyevH0L5zv2tQCZbZ')"> Sistem Informasi Keuangan Daerah </a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" onclick="window.location.replace('?@JJFi91c5rZ8Jkk0W8dwojtP39UD/@C7ceGJJC3GvBuaI7yLjeqsKI729XMXZSl5caMBeh786nlZVjRnqyeGa7LaM8/WN805vQdik1nchfdPPwDNqMBtWPzAIzI5YUOx')"> Sistem Informasi Pemerintahan Daerah Lainnya </a>
+                            </li>
+                            <!-- <li>
+                              <a href="javascript:void(0);"> Monev </a>
+                            </li> -->
+                        </ul>
+                  </li>
+                                    <li class="">
+                      <a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="javascript:void"><i class="ico-address-book" style="margin-top:-5px;"></i> <span class="text-shadow">Pendaftaran</span></a>
+                        <ul class="dropdown-menu animated bounceInDown">
+                            <li>
+                              <a href="javascript:void(0);" class="reguser"> Individu / Lembaga</a>
+                            </li>
+                        </ul>
+                  </li>
+                                </ul>
+          </div>
+          <!-- /.navbar-header -->
+          <!-- /.navbar-top-links -->
+          <!-- /.navbar-static-side -->
+      </nav>
+        <div class="row" style="padding-top:50px;">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="wrapper-tengah">
+          <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 m-t-0 text-center">
+                  <img src="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/images/admin-logo.png" alt="logo" class="img-shadow" width="90">
+                  <div class="col_md_12 col_sm_12 col_xs_12 m_t_0 p_t_2" style="position:fixed;background:yellow;width:100%;text-align:center;z-index:101;"></div><input type="hidden" name="0x69kEs9" value="XxGAhkPKgP7PbSCypKgXg17T5SkxRd32q68vtRim"><div class="col_md_12 col_sm_12 col_xs_12 m_t_0 p_t_2" style="position:fixed;background:yellow;width:100%;text-align:center;z-index:101;"></div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h2 class="text-outline text-center text-shadow">Sistem Informasi Pemerintahan Daerah</h2>
+                                    <h4 class="text-center text-white text-shadow"><span class="btn btn-warning">Sistem Informasi Pembangunan Daerah</span></h4>
+                                </div>
+          </div>
+          <input type="hidden" name="_tawon" value="a274a8110803f0a36952141a741708d4">
+          <div class="login-box border-radius" style="background:#ecf0f1;margin:0 auto;">
+            <div class="signin-box" style="margin-top:0px">
+                            <form class="form-horizontal form-material no-bg-addon form-validate" id="loginform">
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <div class="media border-grey bg-cloud border-radius m-t-0">
+                      <div class="media-body text-center">
+                                                <a href="javascript:void(0);"><img src="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/logo_daerah/logo_kab_jayapura.png" class="" width="50"></a>
+                                                <h4 class="text-shadow text-white font-bold m-t-5">
+                                                      Pemerintah Kab. Jayapura
+                                                  </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group m-t-0">
+                  <div class="col-xs-12">
+                    <input class="form-control" type="text" required="" placeholder="Username" name="user_name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <input class="form-control" type="password" required="" placeholder="Password" name="user_password" id="user_passwd">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <div class="checkbox pull-left p-t-0">
+                      <input id="hide_passwd" type="checkbox" checked="">
+                      <label for="hide_passwd" class=""> Sembunyikan Karakter</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group text-center font-bold text-dark m-t-20">
+                  <div class="col-xs-12">
+                    <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
+                  </div>
+                </div>
+                
+                <div class="form-group font-bold" style="margin:-15px;padding-top:10px">
+                  <p class="text-center">SIPD © 2019</p>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+      <!-- end of wrapper tengah -->
+      </div>
+    </div>
+  </div>
+
+    <div class="form-sidebar registrasi" style="overflow: visible;">
+        <div class="slimScrollDiv" style="position: relative; overflow: visible hidden; width: auto; height: 100%;"><div class="slimscrollright" style="overflow: hidden; width: auto; height: 100%;">
+            <div class="frpanel-title font-medium frpanel-theme"> <label id="judul_form">FORM REGISTRASI</label><button type="button" class="close windowtoggle close-form"><span aria-hidden="true"><i class="mdi mdi-close-circle"></i></span></button> </div>
+            <div class="fr-panel-body">
+              <div class="grup_form_register">
+                <form class="form-horizontal form-material" id="form_register" data-toggle="validator" enctype="multipart/form-data" method="post" novalidate="true">
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold">Jenis Profil</label>
+                        <div class="col-xs-12">
+                        <div class="select2-container form-control select2" id="s2id_jenis_profil"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-1">-- Pilih Jenis Profil --</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen1_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-1">   </ul></div></div><select name="jenis_profil" id="jenis_profil" class="form-control select2" tabindex="-1" title="" style="display: none;">
+                          <option value="">-- Pilih Jenis Profil --</option>
+                          <option value="3">Individu / Perseorangan</option>
+                          <option value="4">Lembaga / Organisasi</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold">Nama Lembaga/Organisasi/Individu</label>
+                        <div class="col-xs-12">
+                        <input class="form-control" type="text" placeholder="Nama Lembaga/Organisasi/Individu" name="nama_teks">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold">Alamat</label>
+                        <div class="col-xs-12">
+                          <textarea class="form-control" name="alamat_teks" placeholder="Input Data Alamat"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold">Kabupaten/Kota</label>
+                        <div class="col-xs-12">
+                          <div class="select2-container form-control select2" id="s2id_autogen2"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-3">Pilih Kabupaten/Kota</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen3" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-3" id="s2id_autogen3"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen3_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-3" id="s2id_autogen3_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-3">   </ul></div></div><select class="form-control select2" name="kab_kota" required="" tabindex="-1" title="" style="display: none;">
+                            <option value="">Pilih Kabupaten/Kota</option>
+                                                                                    <option value="442">Kab. Jayapura</option>
+                                                                                  </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold">Kecamatan</label>
+                        <div class="col-xs-12">
+                          <div class="select2-container form-control select2" id="s2id_autogen4"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-5">Kecamatan</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen5" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-5" id="s2id_autogen5"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen5_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-5" id="s2id_autogen5_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-5">   </ul></div></div><select class="form-control select2" name="kecamatan" required="" tabindex="-1" title="" style="display: none;">
+                            <option value="">Kecamatan</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold">Kelurahan/Desa</label>
+                        <div class="col-xs-12">
+                          <div class="select2-container form-control select2" id="s2id_autogen6"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-7">Kelurahan/Desa</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen7" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-7" id="s2id_autogen7"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen7_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-7" id="s2id_autogen7_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-7">   </ul></div></div><select class="form-control select2" name="kelurahan" required="" tabindex="-1" title="" style="display: none;">
+                            <option value="">Kelurahan/Desa</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="form-group grup-nik">
+                        <label class="col-xs-12 font-bold">NIK</label>
+                        <div class="col-xs-12">
+                          <input class="form-control" type="text" placeholder="NIK" name="nik_teks">
+                        </div>
+                    </div>
+                    <div class="form-group grup-npwp">
+                        <label class="col-xs-12 font-bold">NPWP</label>
+                        <div class="col-xs-12">
+                          <input class="form-control" type="text" placeholder="NPWP" name="npwp_teks">
+                        </div>
+                    </div>
+                    <div class="form-group grup-telp">
+                        <label class="col-xs-12 font-bold">No. Telp</label>
+                        <div class="col-xs-12">
+                          <input class="form-control" type="text" placeholder="Nomor Telepon" name="telp_teks">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold">Alamat Email</label>
+                        <div class="col-xs-12">
+                          <input class="form-control" type="email" placeholder="email@email.com" name="email_teks">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold text-danger">Username **</label>
+                        <div class="col-xs-12">
+                        <input class="form-control" type="text" placeholder="Username" name="username_teks" readonly="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold">Password</label>
+                        <div class="col-xs-12">
+                        <input class="form-control" type="password" placeholder="Password" name="password_teks">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 font-bold">Ulangi Password</label>
+                        <div class="col-xs-12">
+                        <input class="form-control" type="password" placeholder="Konfirmasi Password" name="repassword_teks">
+                        </div>
+                    </div>
+                    <div class="form-group grup_akta_kumham">
+                        <label class="col-xs-12 font-bold">Akta Kementerian Hukum dan HAM</label>
+                        <div class="col-xs-12">
+                          <input type="file" class="form-control" name="akta_kumham" id="akta_kumham" placeholder="Surat Akta" required="">
+                          <span class="help-block font-12" id="help_kumham"><font color="#f45f09">Dokumen yang diunggah menggunakan extension .pdf / Maksimal Ukuran File 500 KB</font></span>
+                        </div>
+                    </div>
+                    <div class="form-group grup_no_sertifikat">
+                        <label class="col-xs-12 font-bold">Nomor Sertifikat</label>
+                        <div class="col-xs-12">
+                          <input type="file" class="form-control" name="no_sertifikat" id="no_sertifikat" placeholder="Nomor Sertifikat" required="">
+                          <span class="help-block font-12" id="help_sertifikat"><font color="#f45f09">Dokumen yang diunggah menggunakan extension .pdf / Maksimal Ukuran File 500 KB</font></span>
+                        </div>
+                    </div>
+                    <div class="form-group grup_ijin_op">
+                        <label class="col-xs-12 font-bold">Ijin Operasional</label>
+                        <div class="col-xs-12">
+                          <input type="file" class="form-control" name="ijin_op" id="ijin_op" placeholder="Ijin Operasional" required="">
+                          <span class="help-block font-12" id="help_ijinop"><font color="#f45f09">Dokumen yang diunggah menggunakan extension .pdf / Maksimal Ukuran File 500 KB</font></span>
+                        </div>
+                    </div>
+                    <div class="form-group grup_surat_dom">
+                        <label class="col-xs-12 font-bold">Surat Domisili</label>
+                        <div class="col-xs-12">
+                          <input type="file" class="form-control" name="surat_dom" id="surat_dom" placeholder="Surat Domisili" required="">
+                          <span class="help-block font-12" id="help_surdom"><font color="#f45f09">Dokumen yang diunggah menggunakan extension .pdf / Maksimal Ukuran File 500 KB</font></span>
+                        </div>
+                    </div>
+                    <div class="form-group set_foto">
+                        <label class="col-xs-12 font-bold">Foto</label>
+                        <div class="col-xs-12">
+                          <input type="file" class="form-control" name="foto" id="foto" required="">
+                          <span class="help-block font-12" id="help_foto"><font color="#f45f09">Dokumen yang diunggah menggunakan extension .jpg, .jpeg, .png, .bmp / Maksimal Ukuran File 500 KB</font></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group text-center m-t-20 button-submit">
+                      <div class="col-xs-3">
+                        <button class="btn btn-info btn-block text-uppercase waves-effect waves-light" type="submit" id="simpan_usulan">Simpan</button>
+                      </div>
+                    </div>
+                </form>
+              </div>
+
+            </div>
+        </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 8px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    </div>
+    <div class="form-sidebar-backdrop"></div>
+  
+    
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/js/jquery.slimscroll.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/js/waves.js"></script>
+  <script> var remot="daerah",apel="plan",endog="main",pot="WN02KrQREHjo3rDMsom8N1X7wnhzBd06tlQmBNkdI0cWM5@8kZG7gI7E06swvWpajeSkSRlkB1ZTPQW/oA4FEqOjOuTLx9d94XMXblFbEqJYZ/5U0S@bPPgZuD2hzpDC",slog="f@VTO6Y6ip6mIPz23HVVWkDmvEwpReW55oms9qqYQ/5QbYF/aaPtxSR@v5JUw7@sL3xsduwpCG1KISYtD6YYPm/@0pkHoJjtTbSE8g6IRXclEkAc8MUqFYF@WP5fB0yfnKe8VwZ22bDPNikTt1@98zX8P9l/@afRZBdQptmXHMJF1uPkZH69ygRsYT5@ODjn"; </script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/js/sanblok.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/js/dakron.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/sweetalert/sweetalert.min.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/blockUI/jquery.blockUI.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/js/jquery.style.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/custom-select/custom-select.min.js" type="text/javascript"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/plugins/bower_components/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/js/custom.min.js"></script>
+  <script src="https://jayapurakab.sipd.kemendagri.go.id/assets/js/validator.js"></script>
+
+
+<span role="status" aria-live="polite" class="select2-hidden-accessible"></span></body></html>
