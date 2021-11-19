@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const renjaController = require('../controllers/renjaController');
 
-router.get('/renja', renjaController.renja);
+router.route('/renja', renjaController.renja).get();
 
 module.exports = router;

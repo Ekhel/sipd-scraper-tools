@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    {{>header}}
+    <br />
+    <br />
+    <br />
+    <div class="ui container">
+        <div class="ui segment">
+            <div class="ui breadcrumb">
+                <a href="#" class="section">Scrap</a>
+                <i class="right chevron icon divider"></i>
+                <div class="active section">Program</div>
+            </div>
+        </div>
+        <div class="ui segment">
+            <table class="small ui yellow celled table">
+                <thead>
+                    <tr>
+                        <th>Kode</th>
+                        <th>Program</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each result}}
+                    <tr>
+                        <td class="ui center aligned">{{this.kode_program}}</td>
+                        <td><a href="#">{{this.nama_program}}</a></td>
+                        <td>
+                            <a href="#" class="ui success label" title="Detail"><i class="icon file alternate"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {{>footer}}
+
+</body>

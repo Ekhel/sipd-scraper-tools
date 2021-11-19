@@ -1,0 +1,1 @@
+exports.getprogram = "SELECT * FROM v_rkpd_program";
