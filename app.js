@@ -8,6 +8,7 @@ const app = express();
 const renjaRoutes = require('./routes/renjaRoute');
 const configRoutes = require('./routes/configRoute');
 const programRoutes = require('./routes/programRoute');
+const kegiatanRoutes = require('./routes/kegiatanRoute');
 
 const public = path.join(__dirname, './public/');
 const viewPath = path.join(__dirname, './templates/views');
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/', programRoutes);
+app.use('/', kegiatanRoutes);
 
 app.get('', (req, res) => {
     res.render('home', {
